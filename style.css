@@ -1,0 +1,88 @@
+/* Importamos la fuente MS Sans Serif para replicar el estilo de la época */
+@font-face {
+    font-family: 'MS Sans Serif';
+    src: url('https://kristall.github.io/98.css/ms_sans_serif.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #3a6ea5; /* Color de fondo similar al de Windows XP */
+    color: #000;
+    font-family: 'MS Sans Serif', sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.window {
+    background-color: #ece9d8; /* Color de ventana de Windows XP */
+    border: 1px solid #000;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    width: 90%;
+    max-width: 800px;
+}
+
+.title-bar {
+    background: linear-gradient(to right, #0a246a, #a6caf0); /* Gradiente de la barra de título */
+    color: #fff;
+    font-weight: bold;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: default;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+.title-bar-text {
+    padding-left: 5px;
+}
+
+.title-bar-controls button {
+    background-color: #ece9d8;
+    border: 1px solid #000;
+    box-shadow: inset 1px 1px #fff, inset -1px -1px #888, 1px 1px 0 #000;
+    width: 20px;
+    height: 20px;
+    margin-left: 3px;
+    cursor: pointer;
+}
+
+.title-bar-controls button:active {
+    box-shadow: inset 1px 1px #888, inset -1px -1px #fff, 1px 1px 0 #000;
+}
+
+.window-body {
+    padding: 15px;
+}
+
+.post {
+    background-color: #fff;
+    border: 1px solid #808080;
+    padding: 15px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    box-shadow: 1px 1px 0 #000, 2px 2px 0 #808080;
+    transition: transform 0.1s ease-in-out;
+}
+
+.post:hover {
+    transform: scale(1.02);
+}
+
+h1, h2, p {
+    margin: 0 0 10px 0;
+}
+
+h1 {
+    font-size: 24px;
+    color: #0a246a;
+}
