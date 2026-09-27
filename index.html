@@ -3,9 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>QuadEngine - Coming Soon</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    
+    <script>
+        // QuadEngine Brand Configuration
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'bg-dark': '#121212',
+                        'text-cream': '#F2EBE1',
+                        'text-gray': '#6B6B6B',
+                        'nm-green': '#1EA642',
+                        'nm-yellow': '#FFB300',
+                        'nm-blue': '#1A5BFF',
+                        'nm-orange': '#FF6A00',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { font-weight: 400; }
+
+        .hover-bold {
+            transition: font-weight 0.15s ease-out, transform 0.2s ease-out;
+            display: inline-block; 
+        }
+        .hover-bold:hover { font-weight: 900 !important; }
+
+        .reveal-on-load {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.8s ease-out forwards;
+        }
+
+        @keyframes fadeUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        
+        /* Subtle grid background */
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        }
+    </style>
 </head>
-<body>
-    <h1>soon</h1>
+<body class="bg-bg-dark text-text-cream font-sans h-screen w-screen overflow-hidden selection:bg-nm-blue selection:text-white relative bg-grid flex flex-col items-center justify-center">
+
+    <!-- Decorative Background Glows -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-nm-blue/10 blur-[120px] rounded-full z-0 pointer-events-none"></div>
+    <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-nm-green/5 blur-[150px] rounded-full z-0 pointer-events-none"></div>
+
+    <!-- Header / Logo -->
+
+
+    <!-- Main Content -->
+    <main class="relative z-10 flex flex-col items-center text-center px-6 max-w-2xl">
+        <div class="reveal-on-load">
+            <span class="inline-block py-1 px-3 rounded-full border border-white/10 bg-white/5 text-text-gray text-xs font-medium tracking-widest uppercase mb-6">
+                In Development
+            </span>
+        </div>
+        
+        <h1 class="text-5xl md:text-7xl leading-tight tracking-tighter lowercase select-none mb-6 reveal-on-load delay-100 flex flex-col items-center">
+            <div>
+                <span class="text-text-cream hover-bold cursor-default">Coming</span>
+                <span class="text-nm-blue hover-bold cursor-default">soon.</span> 
+            </div>
+        </h1>
+        
+        <p class="text-text-gray text-lg md:text-xl mb-12 hover-bold cursor-default reveal-on-load delay-200">
+            Ditch the rigs. Ditch the keyframes.
+        </p>
+
+        <!-- Newsletter / Notification Form Placeholder -->
+       
+    </main>
+
+    <!-- Footer Links -->
+    <footer class="absolute bottom-8 w-full px-8 flex flex-col md:flex-row justify-between items-center gap-4 z-20 reveal-on-load delay-200 text-text-gray text-xs">
+        <p class="hover-bold cursor-default">&copy; 2026 JampDev. Building tools to replace the ones you complained about.</p>
+
+    </footer>
+
 </body>
 </html>
